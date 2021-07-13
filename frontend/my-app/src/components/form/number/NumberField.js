@@ -6,6 +6,7 @@ const NumberField = (props) => {
         <Fragment>
              <Label htmlFor={props.data.label}>{props.data.label}</Label>
                    <Input id={props.data.label}
+                      pattern="^[0-9]+$"
                        type="number"
                        defaultValue={props.data.value}
                        required={props.data._metadata?props.data._metadata.required:false}
