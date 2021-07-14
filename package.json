@@ -1,0 +1,22 @@
+{
+  "name": "testproject",
+  "version": "1.0.0",
+  "description": "Backend -- \r cd backend\r npm i\r nodemon app.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"cd backend && nodemon app.js\" \"cd frontend/my-app && yarn start\" "
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tagizadeorxan/dynamicForm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tagizadeorxan/dynamicForm/issues"
+  },
+  "homepage": "https://github.com/tagizadeorxan/dynamicForm#readme",
+  "devDependencies": {
+    "concurrently": "^6.2.0"
+  }
+}
