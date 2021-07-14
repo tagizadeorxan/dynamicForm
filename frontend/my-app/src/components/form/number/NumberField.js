@@ -7,6 +7,7 @@ const NumberField = (props) => {
     const [input, setInput] = useState(props.data.value)
 
     const checkInput = (e) => {
+        props.addEditedData(props.data.uid,e.target.value)
         props.pushNotification({ status: false, type: null, message: null })
         if (Number(e.target.value) < 1 || isNaN(e.target.value)) {
             setInput(props.data.value)
