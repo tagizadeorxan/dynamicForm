@@ -1,0 +1,27 @@
+.notification {
+    position: relative;
+    display: block;
+    padding: 13px 15px;
+    
+    background-color: #fff;
+    
+    border-radius: 4px;
+    border: 1px solid transparent;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  
+  .notification--type-success {
+    border-color: #2FCF9C;
+    color: #2FCF9C;
+  }
+  
+  .notification--type-error {
+    border-color: #D74141;
+    color: #D74141;
+  }
+  
+  .notification--type-notify {
+    border-color: #085A7F;
+    color: #085A7F;
+  }
