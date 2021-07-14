@@ -18,7 +18,19 @@ const Form = () => {
 
     const submitForm = (e) => {
         e.preventDefault()
-        POST('data', editedData).then(res => alert("successfully changed"))
+        POST('data', editedData).then(res => {
+            if (res.status === 200) {
+                pushNotification({ status: true, type: 'success', message: 'Successfully updated' })
+                setTimeout(() => {
+                    pushNotification({ status: false })
+                }, 3000)
+            } else {
+                pushNotification({ status: true, type: 'error', message: 'There was a problem while updating data' })
+                setTimeout(() => {
+                    pushNotification({ status: false })
+                }, 3000)
+            }
+        })
     }
 
     const addEditedData = (id, value) => {

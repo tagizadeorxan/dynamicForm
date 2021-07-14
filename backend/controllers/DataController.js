@@ -16,10 +16,8 @@ exports.data = [
 
 exports.dataChange = [
     (req, res) => {
-        console.log(req.body)
         let requestData = req.body
-       
-    
+
         fs.readFile('../backend/assets/data.json', (err, data) => {
             if (err) apiResponse.ErrorResponse(res, err);
             data = JSON.parse(data)
@@ -30,11 +28,7 @@ exports.dataChange = [
                     return e
                   } else {
                      let find = requestData.find(r => Number(r.id) === Number(e.uid))
-                     
                      if(find) {
-                         console.log("found")
-                         console.log(find)
-                         console.log(e)
                          e.value = find.value
                      }
                      return e
@@ -42,9 +36,8 @@ exports.dataChange = [
               })
             }
             let result = editData(data,requestData)
-            console.log(result)
             fs.writeFile("../backend/assets/data.json", JSON.stringify(result), function writeJSON(err) {
-                if (err) return console.log(err);
+                if (err) return apiResponse.ErrorResponse(res, err);;
                 console.log('success')
             apiResponse.successResponseWithData(res, "success",result)
               });
