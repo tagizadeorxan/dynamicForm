@@ -4,7 +4,9 @@
   "description": "Backend -- \r cd backend\r npm i\r nodemon app.js",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"cd backend && nodemon app.js\" \"cd frontend/my-app && yarn start\" "
+    "dev": "concurrently \"cd backend && nodemon app.js\" \"cd frontend/my-app && yarn start\" ",
+    "backend":"cd backend && nodemon app.js",
+    "frontend":"cd frontend/my-app && yarn start"
 },
   "repository": {
     "type": "git",
